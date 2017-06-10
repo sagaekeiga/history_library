@@ -1,0 +1,16 @@
+
+<div class="ui grid">
+  <div class="sixteen wide column"></div>
+  <div class="one wide column"></div>
+  <div class="ten wide column">
+        <div class="ui segment">
+          <h1 class="ui center aligned header"><%= @era.name  %></h1>
+          <div class="ui olive message">
+              <%= @era.closed %>
+              <%= @era.start %>
+          </div>
+          <%= qiita_markdown(@era.description) %>
+        </div>
+  </div>
+  <div class="five wide column"></div>
+</div>

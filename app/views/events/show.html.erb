@@ -1,0 +1,19 @@
+
+
+<div class="ui grid">
+  <div class="sixteen wide column"></div>
+  <div class="one wide column"></div>
+  <div class="ten wide column">
+        <div class="ui segment">
+          <h1 class="ui center aligned header"><%= @event.name  %></h1>
+          <%= image_tag(@event.url, :class => 'ui fluid image') %>
+          <div class="ui olive message">
+              <%= @event.season %>
+              <%= @event.era %>
+              <%= @event.character %>
+          </div>
+          <%= qiita_markdown(@event.description) %>
+        </div>
+  </div>
+  <div class="five wide column"></div>
+</div>
