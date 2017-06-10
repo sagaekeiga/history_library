@@ -37,6 +37,7 @@ gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 
 gem 'qiita-markdown'
 gem 'github-linguist'
+gem 'mysql2'
 
 
 group :development, :test do
