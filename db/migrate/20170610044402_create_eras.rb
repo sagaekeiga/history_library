@@ -4,7 +4,7 @@ class CreateEras < ActiveRecord::Migration[5.0]
       t.string :name
       t.datetime :start
       t.datetime :closed
-      t.string :description
+      t.text :description
 
       t.timestamps
     end

@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :season
       t.string :url
-      t.string :description
+      t.text :description
       t.string :era
       t.string :character
       

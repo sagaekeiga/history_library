@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170610045532) do
     t.string   "name"
     t.string   "life"
     t.string   "url"
-    t.string   "description"
+    t.text     "description"
     t.string   "era"
     t.string   "event"
     t.datetime "created_at",  null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170610045532) do
     t.string   "name"
     t.datetime "start"
     t.datetime "closed"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20170610045532) do
     t.string   "name"
     t.string   "season"
     t.string   "url"
-    t.string   "description"
+    t.text     "description"
     t.string   "era"
     t.string   "character"
     t.datetime "created_at",  null: false
