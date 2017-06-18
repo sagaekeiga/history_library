@@ -1,18 +1,19 @@
 class PagesController < ApplicationController
   def index
-      @events = Event.all
-      @characters = Character.all
-      @arrays = []
-      @arrays << @events
-      @arrays << @characters
+      @chapters = Chapter.all
+      @chapter = Chapter.new
+      @section = Section.new
+      @sections = Section.all
+      @card = Card.new
+      @cards = Card.all
   end
   
   def manage
-      @characters = Character.all
-      @character = Character.new
-      @era = Era.new
-      @eras = Era.all
-      @event = Event.new
-      @events = Event.all
+      @chapters = Chapter.all
+      @chapter = Chapter.new
+      @section = Section.new
+      @sections = Section.all
+      @card = Card.new
+      @cards = Card.all
   end
 end

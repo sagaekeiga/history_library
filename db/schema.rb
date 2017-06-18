@@ -10,37 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170610045532) do
+ActiveRecord::Schema.define(version: 20170618051950) do
 
-  create_table "characters", force: :cascade do |t|
-    t.string   "name"
-    t.string   "life"
-    t.string   "url"
+  create_table "cards", force: :cascade do |t|
+    t.text     "kind"
+    t.text     "name"
+    t.text     "url"
     t.text     "description"
-    t.string   "era"
-    t.string   "event"
+    t.text     "chapter"
+    t.text     "section"
+    t.text     "year"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "eras", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "start"
-    t.datetime "closed"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "chapters", force: :cascade do |t|
+    t.text     "name"
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.string   "season"
-    t.string   "url"
-    t.text     "description"
-    t.string   "era"
-    t.string   "character"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "sections", force: :cascade do |t|
+    t.text     "name"
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

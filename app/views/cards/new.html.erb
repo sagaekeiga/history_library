@@ -1,0 +1,43 @@
+<%= form_for(@card, html: {class: 'ui form'}) do |f| %>
+<div class="ui raised segment">
+    
+    <div class="field">
+      <label>種類</label>
+      <%= f.select :kind, options_for_select(["人物", "出来事", "その他"]), {}, { class: 'ui fluid dropdown' } %>
+    </div>
+    
+    <div class="field">
+      <label>名称</label>
+      <%= f.text_field :name, class: "" %>
+    </div>
+    
+    <div class="field">
+      <label>画像</label>
+      <%= f.text_field :url, class: "" %>
+    </div>
+    
+    <div class="field">
+      <label>説明</label>
+      <%= f.text_area :description, class: "" %>
+    </div>
+    
+    <div class="field">
+      <label>章</label>
+      <%= f.collection_select :chapter, Chapter.all, :name, :name %>
+    </div>
+
+    <div class="field">
+      <label>項</label>
+      <%= f.collection_select :section, Section.all, :name, :name %>
+    </div>
+    
+    <div class="field">
+      <label>年号</label>
+      <%= f.text_field :year %>
+    </div>
+  
+  <div class="actions">
+    <%= f.submit "登録", class: 'ui button'%>
+  </div>
+</div>
+<% end %>
