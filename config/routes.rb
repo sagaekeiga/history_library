@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api, { format: 'json' } do
     namespace :v1, { format: 'json' } do 
       post 'cards/search'
+      post 'cards/detail'
     end
   end
   resources :cards
