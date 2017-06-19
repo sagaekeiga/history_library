@@ -17,7 +17,7 @@ module Api
          logger.debug("params")
          logger.debug(params)
          logger.debug("params")
-         @card = Card.where("id like '%#{params.to_i}%'") if !params.nil?
+         @card = Card.find_by(id: params.to_i) if !params.nil?
          render json: @card
       end
         
