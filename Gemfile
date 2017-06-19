@@ -32,12 +32,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'unicorn'
-gem 'faker'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 
-gem 'qiita-markdown'
-gem 'github-linguist'
 gem 'mysql2'
+gem "ransack"
 
 
 group :development, :test do

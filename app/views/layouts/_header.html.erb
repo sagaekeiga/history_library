@@ -1,14 +1,14 @@
+
 <div class="ui segment">
-    <h1 class="ui center aligned header">
-          <%= link_to "歴史ライブラリ", root_path %> 
-      <div class="sub header"><br/>
-      日本史・世界史の人物名鑑です。<br/>
-      ネットに落ちている情報、ユーザー様からの事務局への情報により運営されています。<br/>
-      趣味、受験勉強にお役立てください。</div>
-    </h1>
   <h3 class="ui right aligned header">
+    <%= link_to "新規登録", new_card_path, { :class => "ui teal basic button" } %>
+  </h3>
+  <h3 class="ui center aligned header">
+    <%= search_form_for @q,  html: {class: 'ui input'} do |f| %>
+    
+      <%= f.search_field :name_cont %>
+    
+      <%= f.submit %>
+    <% end %>
   </h3>
 </div>
-
-
-

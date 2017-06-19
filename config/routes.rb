@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-  get 'pages/manage'
+  get 'pages/index'
+  root 'pages#manage'
 
   namespace :api, { format: 'json' } do
     namespace :v1, { format: 'json' } do 

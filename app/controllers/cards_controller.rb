@@ -1,6 +1,13 @@
 class CardsController < ApplicationController
+    http_basic_authenticate_with name: "sagae", password: "s19930528"
+    
+    def index
+      @q        = Card.search(params[:q])
+      @cards = @q.result(distinct: true)
+    end
     
     def new
+        @q        = Card.search(params[:q])
         @card = Card.new
     end
     
@@ -9,12 +16,12 @@ class CardsController < ApplicationController
      if @card.save
        redirect_to pages_manage_path
      else
-       @cards = Card.all
-       render 'pages/manage'
+       render 'cards/new'
      end
     end
     
     def edit
+      @q        = Card.search(params[:q])
       @card = Card.find(params[:id])
     end
     
@@ -27,18 +34,8 @@ class CardsController < ApplicationController
     end
     
     def show
+      @q        = Card.search(params[:q])
       @card = Card.find(params[:id])
-    end
-    
-    def edit
-      @characters = Character.all
-      @character = Character.find(params[:id])
-      @eras = Era.all
-      @era = Era.new
-      @event = Event.find(params[:id])
-      @events= Event.all
-      @other = Other.new
-      @others = Other.all
     end
     
     def update

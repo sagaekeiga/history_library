@@ -1,3 +1,12 @@
+    <% if @card.errors.any? %>
+      <div class="ui negative message">
+      <i class="close icon"></i>
+        <% @card.errors.full_messages.each do |msg| %>
+          <p><%= msg %></p>
+        <% end %>
+      </div>
+    <% end %>
+    
 <%= form_for(@card, html: {class: 'ui form'}) do |f| %>
 <div class="ui raised segment">
     
