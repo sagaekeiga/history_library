@@ -8,7 +8,7 @@ module Api
          logger.debug("params")
          logger.debug(params)
          logger.debug("params")
-         @card = Card.where("name like '%#{params}%'")
+         @card = Card.where("name like '%#{params}%'") if !params.nil?
          render json: @card
       end
         
