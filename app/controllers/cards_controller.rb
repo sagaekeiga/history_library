@@ -30,7 +30,7 @@ class CardsController < ApplicationController
         if @card.delete
          flash[:success] = "deleted"
         end
-        redirect_to pages_manage_path
+        redirect_to root_path
     end
     
     def show
@@ -41,7 +41,7 @@ class CardsController < ApplicationController
     def update
         @card = Card.find(params[:id])
         @card.update(card_params)
-        redirect_to pages_manage_path
+        redirect_to root_path
     end
 
     
