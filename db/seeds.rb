@@ -6,6 +6,8 @@
 Chapter.create!(name:  "先史の世界",
              number: 1)
 
+    Section.create!(name:  "その他",
+                 number: 1)
              
 ## オリエントと地中海世界
 
@@ -267,7 +269,8 @@ Chapter.create!(name:  "現在の世界",
     Section.create!(name:  "現代文明の諸特徴",
                  number: 4)
                  
-                 
+Chapter.create!(name:  "その他",
+             number: 18)
                  
 Card.create!(kind: "その他",
              name:  "メソアメリカ文明",
