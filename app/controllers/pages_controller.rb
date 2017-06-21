@@ -18,4 +18,7 @@ class PagesController < ApplicationController
       @card = Card.new
       @cards = Card.all
   end
+  
+  def privacy
+  end
 end

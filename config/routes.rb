@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/index'
+  get 'pages/privacy'
   root 'pages#manage'
 
   namespace :api, { format: 'json' } do
