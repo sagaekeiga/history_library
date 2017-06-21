@@ -16,7 +16,7 @@ class PagesController < ApplicationController
       @section = Section.new
       @sections = Section.all
       @card = Card.new
-      @cards = Card.all
+      @cards = Card.all.order("created_at").reverse
   end
   
   def privacy
