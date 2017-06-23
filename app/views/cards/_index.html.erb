@@ -1,26 +1,20 @@
         <table class="ui celled table">
           <thead>
             <tr><th>ID</th>
-            <th>種類</th>
             <th>名称</th>
             <th>画像</th>
+            <th>URL</th>
             <th>説明</th>
-            <th>章</th>
-            <th>項</th>
-            <th>年号</th>
             <th>管理</th>
           </tr></thead>
           <tbody>
             <% @cards.each do |card| %>
                 <tr>
                  <td ><%= card.id %></td>
-                 <td ><%= card.kind %></td>
                  <td><%= link_to"#{card.name}", card, { :target => "_blank"}  %></td>
-                 <td><%= image_tag(card.url, :size => '50x50') %></td>
-                 <td><%= card.description.truncate(20) %></td>
-                 <td><%= card.chapter %></td>
-                 <td><%= card.section %></td>
-                 <td><%= card.year %></td>
+                 <td ><%= card.url %></td>
+                 <td><%= image_tag(card.image, :size => '50x50') if !card.image.nil? %></td>
+                 <td><%= card.description.truncate(20) if !card.description.nil? %></td>
                  <td>
                   <%= link_to "編集", edit_card_path(card.id), { :class => "ui olive button" } %>
                   <%= link_to "削除", card, { :class => "ui red button", method: :delete, data: { confirm: "本当に削除してもいいですか？" }} %>

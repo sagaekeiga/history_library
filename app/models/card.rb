@@ -1,6 +1,5 @@
 class Card < ApplicationRecord
-validates :name, presence: true, uniqueness: true
-validates :url, presence: true, uniqueness: true
-validates :description, presence: true
+validates :name, uniqueness: true
+validates :url, uniqueness: true
 
 end

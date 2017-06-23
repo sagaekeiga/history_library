@@ -4,6 +4,7 @@ class CreateCards < ActiveRecord::Migration[5.0]
       t.text :kind
       t.text :name
       t.text :url
+      t.text :image
       t.text :description
       t.text :chapter
       t.text :section

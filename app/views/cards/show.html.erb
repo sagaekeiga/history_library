@@ -10,12 +10,16 @@
           </tr></thead>
           <tbody>
             <tr>
-              <td class="collapsing">ID</td>
+              <td>ID</td>
               <td><%= @card.id %></td>
             </tr>
             <tr>
+              <td class="collapsing">イメージ</td>
+              <td><%= image_tag(@card.image, :class => "ui fluid image") if !@card.image.nil? %></td>
+            </tr>
+            <tr>
               <td>URL</td>
-              <td><%= image_tag(@card.url, :class => "ui fluid image") %></td>
+              <td><%= @card.url %></td>
             </tr>
             <tr>
               <td>種類</td>

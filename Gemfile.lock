@@ -202,6 +202,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+  nokogiri
   rails (= 5.0.0)
   ransack
   sass-rails (~> 5.0)
