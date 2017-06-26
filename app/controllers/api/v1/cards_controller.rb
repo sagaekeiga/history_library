@@ -2,6 +2,13 @@ module Api
   module V1
     class CardsController < ApplicationController
     skip_before_filter :verify_authenticity_token
+
+
+      def index
+         @cards = Card.all
+         render json: @cards
+      end
+      
       
       def search
          params = request.body.read
